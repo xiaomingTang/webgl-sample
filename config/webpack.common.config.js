@@ -30,22 +30,31 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx|ts|tsx)$/,
+        include: Paths.Src,
+        exclude: /node_modules/,
         enforce: "pre",
-        loader: "source-map-loader"
+        use: [
+          "source-map-loader",
+          {
+            loader: "eslint-loader",
+            options: {
+              formatter: require('eslint/lib/cli-engine/formatters/stylish')
+            },
+          }
+        ]
       },
       {
         test: /\.(js|jsx|ts|tsx)$/,
         loader: "ts-loader",
-        // exclude: /node_modules/,
         options: {
           transpileOnly: true,
           getCustomTransformers: _ => ({
-            before: [ tsImportPluginFactory({
+            before: [tsImportPluginFactory({
               libraryDirectory: "es",
               libraryName: "antd",
               style: "css"
-            }) ]
+            })]
           }),
         }
       },
