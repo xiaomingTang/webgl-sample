@@ -39,7 +39,7 @@ module.exports = {
           {
             loader: "eslint-loader",
             options: {
-              formatter: require('eslint/lib/cli-engine/formatters/stylish')
+              formatter: require('eslint/lib/cli-engine/formatters/stylish'),
             },
           }
         ]
