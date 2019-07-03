@@ -27,7 +27,6 @@ const prodConfig = {
         uglifyOptions: {
           compress: {
             unused: true,
-            warnings: false,
             drop_debugger: true
           },
           output: {
