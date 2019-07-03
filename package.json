@@ -7,8 +7,8 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --progress --mode development --config ./config/webpack.dev.config.js",
     "bundle": "cross-env NODE_ENV=production webpack            --progress --mode production --config ./config/webpack.dev.bundle-analyzer.config.js",
     "build": "cross-env NODE_ENV=production  webpack            --progress --mode production --config ./config/webpack.prod.config.js",
-    "lint": "eslint src --ext .jsx --ext .tsx",
-    "lint-fix": "eslint src --fix --ext .jsx --ext .tsx"
+    "lint": "eslint src --ext .js --ext .ts --ext .jsx --ext .tsx",
+    "lint-fix": "eslint src --fix --ext .js --ext .ts --ext .jsx --ext .tsx"
   },
   "dependencies": {
     "antd": "^3.20.0",
