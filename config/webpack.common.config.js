@@ -24,7 +24,7 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
     alias: {
       "@Src": Paths.Src,
-      "@ant-design/icons/lib/dist$": path.resolve(Paths.Src, "antd-icons.ts"),
+      "@ant-design/icons/lib/dist$": path.resolve(Paths.Src, "assets/icons/antd-icons.ts"),
     }
   },
   module: {
