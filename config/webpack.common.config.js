@@ -30,6 +30,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.glsl$/,
+        loader: "raw-loader"
+      },
+      {
         test: /\.(js|jsx|ts|tsx)$/,
         include: Paths.Src,
         exclude: /node_modules/,

@@ -32,6 +32,7 @@ module.exports = {
     "indent": ["error", 2],
     "@typescript-eslint/indent": ["error", 2],
     "semi": ["error", "never"],
+    "max-len": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
   },
   "settings": {
